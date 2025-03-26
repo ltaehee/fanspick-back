@@ -19,7 +19,7 @@ const s3 = new S3Client({
 const createPresignedUrl = async () => {
   const timestamp = Date.now();
   const s3Params = {
-    Bucket: 'fanspick',
+    Bucket: 'cinemahub-imgs',
     Key: `image/${timestamp}`,
   };
 

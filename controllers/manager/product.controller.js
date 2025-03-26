@@ -29,14 +29,14 @@ const addProduct = async (req, res, next) => {
       !price ||
       !introduce ||
       !image ||
-      !detailImage.length ||
-      categoryIndex === undefined ||
-      categoryIndex === null
+      !detailImage.length
+      // categoryIndex === undefined ||
+      // categoryIndex === null
     ) {
       // return res
       //   .status(400)
       //   .json({ message: '입력이 안된 필드값이 있습니다.' });
-      throw createError(400, '입력이 안된 필드값이 있습니다.');
+      // throw createError(400, '입력이 안된 필드값이 있습니다.');
     }
     const categories = await Category.find();
 
@@ -196,14 +196,14 @@ const updateProduct = async (req, res, next) => {
       !price ||
       !introduce ||
       !image ||
-      !detailImage.length ||
-      categoryIndex === undefined ||
-      categoryIndex === null
+      !detailImage.length
+      // categoryIndex === undefined ||
+      // categoryIndex === null
     ) {
       // return res
       //   .status(400)
       //   .json({ message: '입력이 안된 필드값이 있습니다.' });
-      throw createError(400, '입력이 안된 필드값이 있습니다.');
+      // throw createError(400, '입력이 안된 필드값이 있습니다.');
     }
 
     const categories = await Category.find();
