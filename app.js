@@ -53,6 +53,10 @@ app.use('/api/review', reviewRoutes);
 app.use('/api/mypage', mypageRoutes);
 app.use('/api/aws', awsRoutes);
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK' });
+});
+
 // 에러 핸들러
 app.use(errorHandler);
 
